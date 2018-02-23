@@ -41,7 +41,7 @@ exports.list_sku = function(req, res) {
     jsontemp = "";
     var i = 0;
     var existe = false;
-    while(!existe && i<numLineas){
+    while(!existe || i<numLineas){
         if(lista[i] == req.params.skuId.toString()){
             jsontemp  =  '{"MarketPlace":"SI","SKU":"' + lista[i] + '","SELLER":"' + lista[i+1] + '"}';
             existe = true;

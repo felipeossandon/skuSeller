@@ -1,0 +1,17 @@
+{
+  "name": "wsskuseller",
+  "version": "1.0.0",
+  "description": "rest api para obtener sku y seller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

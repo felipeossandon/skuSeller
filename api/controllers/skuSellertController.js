@@ -41,7 +41,9 @@ exports.list_sku = function(req, res) {
     jsontemp = "";
     var i = 0;
     var existe = false;
-    while(!existe || i<numLineas){
+    console.log("Numero de Lineas: " + numLineas);
+    while(i<numLineas){
+        console.log("Entre al ciclo: " + i);
         if(lista[i] == req.params.skuId.toString()){
             jsontemp  =  '{"MarketPlace":"SI","SKU":"' + lista[i] + '","SELLER":"' + lista[i+1] + '"}';
             existe = true;
@@ -50,10 +52,9 @@ exports.list_sku = function(req, res) {
     }
     if (!existe){
         jsontemp  =  '{"MarketPlace":"NO","SKU":"","SELLER":""}';
-    }else{
-        console.log("String antes de Json: " + jsontemp);
-        txtJson = JSON.stringify(jsontemp);
-        console.log("JSON:" + jsontemp);
-        res.json(JSON.parse(jsontemp));
     }
+        //console.log("String antes de Json: " + jsontemp);
+        //txtJson = JSON.stringify(jsontemp);
+        //console.log("JSON:" + jsontemp);
+        res.json(JSON.parse(jsontemp));
 };
